@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+html,body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100%;
+}
+
+</style>
+</head>
+
+<body>
+<img id="channel" src="beach.gif">
+
+<script>
+
+var channels = [
+	"beach.gif",
+	"flower.gif",
+	"twinpeaks.gif",
+	"rose.gif",
+	"alien.gif",
+	"staywithme.gif",
+]
+
+var channels_index = 0;
+
+function tv(event){
+	console.log(event.key);
+	if(event.keyCode == 38){
+		channels_index = (channels_index + 1) % 6;
+	}
+	if(event.keyCode == 40){
+		channels_index = (((channels_index - 1) % 6) + 6) % 6;
+	}
+	document.getElementById("channel").src = channels[channels_index];
+}
+
+document.onkeydown = tv;
+
+</script>
+</body>
+</html>
