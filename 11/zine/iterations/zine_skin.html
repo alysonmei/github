@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>skin</title>
+</head>
+
+<body>
+<input type="file" id="open-file">
+<h1 id="poem"></h1>
+
+<script>
+
+var reader = new FileReader();
+
+document.getElementById("open-file").onchange = function(){
+	reader.readAsText(this.files[0]);
+}
+
+reader.onload = function(event){
+	searchWord(event.target.result, "skin");
+}
+
+function searchWord(text, word){
+	var words = text.split(/\s+/);
+	var foundwords = [];
+	var i = 0;
+	while(i < words.length - 1){
+		if(words[i] == word){
+			console.log(i);
+			console.log(words[i]);
+
+			var j = 0;
+			while(j < 10){
+				var thisword = words[i + j];
+				foundwords.push(thisword);
+				j = j + 1;
+			}
+		}
+		i = i + 1;
+	}
+
+	var poem = foundwords.join(" ");
+	document.getElementById("poem").innerHTML = poem;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+<input type="file" id="open-file">
+<h1 id="poem"></h1>
+
+<script>
+
+var reader = new FileReader();
+
+document.getElementById("open-file").onchange = function(){
+	reader.readAsText(this.files[0]);
+}
+
+reader.onload = function(event){
+	searchWord(event.target.result, "white");
+}
+
+function searchWord(text, word){
+	var words = text.split(/\s+/);
+	var i = 0;
+	while(i < words.length - 1){
+
+		if(words[i] == word){
+			console.log(i);
+			console.log(words[i]);
+			// we found our word at index i.
+			// now we can do another loop
+			var j = 0;
+			while(j < 8){
+				// iterate over the next 8 words.
+				var thisword = words[i + j];
+
+				j = j + 1;
+			}
+			// end of our inner-loop
+		}
+
+		i = i + 1;
+	}
+
+}
+
+</script>
+</body>
+</html>

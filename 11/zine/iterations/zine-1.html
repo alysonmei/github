@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+<input type="file" id="open-file">
+<h1 id="poem"></h1>
+
+<script>
+
+var reader = new FileReader();
+
+document.getElementById("open-file").onchange = function(){
+	reader.readAsText(this.files[0]);
+}
+
+reader.onload = function(event){
+	buildDictionary(event.target.result);
+	phrase();
+}
+
+var dictionary = {};
+
+function buildDictionary(text){
+	var words = text.split(/\s+/);
+	var i = 0;
+	while(i < words.length - 1){
+		var thisword = words[i];
+		var nextword = words[i+1];
+		if(dictionary[thisword] == undefined){
+			dictionary[thisword] = [];
+		}
+		dictionary[thisword].push(nextword);
+
+		i = i + 1;
+	}
+}
+
+// console.log(dictionary);
+
+function phrase(){
+	var keys = Object.keys(dictionary);
+	var firstword = "white";
+
+	var words = [firstword];
+
+	var counter = 0;
+	while(counter < 8){
+		var thisword = words[words.length - 1];
+		var nextwordarray = dictionary[thisword];
+		counter = counter + 1;
+	}
+
+	var poem = words.join(" ");
+	document.getElementById("poem").innerHTML = poem;
+
+	console.log(phrase);
+}
+
+</script>
+</body>
+</html>
