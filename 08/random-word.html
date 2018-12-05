@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<style>
+html, body {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100%;
+}
+
+h1{
+	font-size:8vmin;
+	color:black;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+#random{
+	color:blue;
+}
+
+</style>
+</head>
+
+<body>
+
+	<h1>At night the <span id="random">alarm</span> roused him from a deep sleep.</h1>
+
+<script>
+
+var sausage = [
+		"ahle wurst",
+		"alheira",
+		"andouille",
+		"Azaruja sausage",
+		"balkenbrij",
+		"Banat sausage",
+		"beutelwurst",
+		"bierschinken",
+		"bierwurst",
+		"biroldo",
+		"black pudding",
+		"bloedworst",
+		"blutwurst",
+		"bologna",
+		"boudin",
+		"braadworst",
+		"Braughing sausage",
+		"braunschweiger",
+		"breakfast sausage",
+		"bregenwurst",
+		"brühwurst",
+		"Bucegi sausage",
+		"Bucovina sausage",
+		"butifarra",
+		"cabanossi",
+		"Carpatin sausage",
+		"cervelatwurst",
+		"chaudin",
+		"chipolata",
+		"chistorra",
+		"chorizo",
+		"chouriço doce",
+		"ciauscolo",
+		"cotechino Modena",
+		"Cumberland sausage",
+		"currywurst",
+		"debrecener",
+		"droëwors",
+		"extrawurst",
+		"fläskkorv",
+		"frankfurter rindswurst",
+		"frankfurter würstchen",
+		"frikandel",
+		"fuet",
+		"gelbwurst",
+		"Genoa salami",
+		"Glamorgan sausage",
+		"Goan sausage",
+		"goetta",
+		"güeña",
+		"haggis",
+		"half-smoke",
+		"helzel",
+		"hog's pudding",
+		"hog maw",
+		"hot dog",
+		"hot Italian sausage",
+		"isterband",
+		"jagdwurst",
+		"kabanos",
+		"kaszanka",
+		"kielbasa",
+		"kishka",
+		"knackwurst",
+		"knipp",
+		"kochwurst",
+		"krakowska",
+		"kranjska klobasa",
+		"krestyanskaya kolbasa",
+		"Lebanon bologna",
+		"leberwurst",
+		"Lincolnshire sausage",
+		"liverwurst",
+		"Lorne sausage",
+		"lucanica",
+		"Lunenburg pudding",
+		"Manchester sausage",
+		"medisterpølse",
+		"mettwurst",
+		"Mioritic sausage",
+		"Moldovean sausage",
+		"mortadella",
+		"Morteau sausage",
+		"myśliwska",
+		"Negru sausage",
+		"Newmarket sausage",
+		"Nürnberger bratwürste",
+		"nădlac sausage",
+		"ossenworst",
+		"Oxford sausage",
+		"panchuker",
+		"pepperette",
+		"pepperoni",
+		"pinkel",
+		"Plai sausage",
+		"Pleşcoi sausage",
+		"prinskorv",
+		"Regensburger wurst",
+		"rookworst",
+		"rosette de Lyon",
+		"rød pølse",
+		"sabodet",
+		"salami",
+		"salchichón",
+		"saucisse de Toulouse",
+		"saucisson",
+		"saumagen",
+		"sausage roll",
+		"schüblig",
+		"Sibiu sausage",
+		"siskonmakkara",
+		"skilandis",
+		"sobrassada",
+		"soppressata",
+		"sopressa",
+		"sremska kobasica",
+		"stippgrütze",
+		"stonner kebab",
+		"strolghino",
+		"summer sausage",
+		"sweet Italian sausage",
+		"teewurst",
+		"Thüringer rotwurst",
+		"Transilvanian sausage",
+		"Vanatori sausage",
+		"verivorst",
+		"Vienna sausage",
+		"weckewerk",
+		"weisswurst",
+		"Westfälische rinderwurst",
+		"winter salami",
+		"wollwurst",
+		"zungenwurst",
+		"zwiebelwurst",
+		"ćevapčići",
+		"češnovka",
+	];
+
+var number = Math.random() * 135;
+var integer = parseInt(number);
+
+document.getElementById("random").innerHTML = sausage[integer];
+
+</script>
+
+</body>
+</html>
